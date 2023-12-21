@@ -44,17 +44,24 @@ const name = 'Mary';
 //     };
 // }
 
-// const logger = {
-//     keys() {
-//         console.log('Object keys', Object.keys(this));
-//     },
-//     keysAndValues() {
-//         Object.keys(this).forEach((key) => {
-//             console.log('Key :', key);
-//             console.log('Values :',this[key]);
-//         })
-//     }
-// };
+const logger = {
+    keys() {
+        console.log('Object keys', Object.keys(this));
+    },
+    keysAndValues() {
+        Object.keys(this).forEach((key) => {
+            console.log('Key :', key);
+            console.log('Values :',this[key]);
+        })
+    }
+};
+//all note bind
+// const bound = logger.keysAndValues.bind({a:1, b:2, c:10});
+// bound();
+//short note bind 
+// logger.keysAndValues.bind({a:1, b:2, c:10})();
+// logger.keys.call(person);
+// logger.keys.apply(person);
 
 const job = {
     position: 'cashier',
